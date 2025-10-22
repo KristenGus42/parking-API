@@ -1,0 +1,109 @@
+<!--
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the html file for the reservation page to our website DubPark.
+  This page will allow a user to browse parking spots in a particular
+  parking lot for specific times.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="parking.css">
+  <script src="parking.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Parking Reservation</title>
+</head>
+<body>
+  <header>
+    <section id="nav-bar">
+      <nav>
+        <a href="index.html"><img id="logo" src="icons/logo.png" alt="logo icon"></a>
+      </nav>
+      <nav id="right-side-nav">
+        <button id='history-btn'>Transaction History</button>
+        <button id='sign-in-btn' disabled>Sign In</button>
+      </nav>
+    </section>
+  </header>
+  <main>
+    <!-- Hard coded information for now until we get full back end going -->
+    <section id="top-section">
+      <h2 id="page-title"></h2>
+      <h3>Please follow the below instruction for your reservation:</h3>
+      <p>
+        Choose a start and end time by ticking off the times you would like!
+        Make sure you choose a valid time, and that you are currently logged in.
+        The navy blue spots are handicapped spots, each lot should have about 3 of these.
+        (Please make sure to bring the proper handicap reserved permits).
+      </p>
+      <p>
+        Once you choose your reservation details you will be asked to review them,
+        then you may submit them.
+      </p>
+      <p>* The navy color spots will be handicaped spots.</p>
+    </section>
+
+    <section id="bottom-section">
+      <!-- select time section -->
+      <article id="time-space">
+        <h3>Choose your desired time slot:</h3>
+        <form>
+          <input type="checkbox" value="1" name="time" id="checkbox-1">
+          <label for="checkbox-1"> 1pm </label>
+
+          <input type="checkbox" value="2" name="time" id="checkbox-2">
+          <label for="checkbox-2"> 2pm </label>
+
+          <input type="checkbox" value="3" name="time" id="checkbox-3">
+          <label for="checkbox-3"> 3pm </label>
+
+          <input type="checkbox" value="4" name="time" id="checkbox-4">
+          <label for="checkbox-4"> 4pm </label>
+
+          <input type="checkbox" value="5" name="time" id="checkbox-5">
+          <label for="checkbox-5"> 5pm </label>
+
+          <input type="checkbox" value="6" name="time" id="checkbox-6">
+          <label for="checkbox-6"> 6pm </label>
+
+          <input type="checkbox" value="7"  name="time" id="checkbox-7">
+          <label for="checkbox-7"> 7pm </label>
+
+          <input type="checkbox" value="8" name="time" id="checkbox-8">
+          <label for="checkbox-8"> 8pm </label>
+
+          <input type="checkbox" value="9" name="time" id="checkbox-9">
+          <label for="checkbox-9">9pm</label>
+        </form>
+      </article>
+
+      <!-- parking lot selection section => *** will show submit btn *** -->
+      <article id="selection-space">
+        <section id="spots-space-container">
+          <h3>Choose your desired parking slot:</h3>
+          <section id="spots-space" class="hidden"></section>
+        </section>
+        <section id="user-confirmation" class="hidden">
+          <button id="submit-btn" class="button">Submit!</button>
+          <button id="edit-btn" class="button">Edit my Choices</button>
+        </section>
+      </article>
+
+      <!-- confirmation space => shows up the spot & time info you selected -->
+      <article id="confirmation-space">
+        <p> Chosen spot: None </p>
+        <p id="time-information"> All Open </p>
+      </article>
+      <section id="confirmation-btn-container">
+        <button id="confirmation-btn" class="button"> Confirm these details? </button>
+      </section>
+    </section>
+
+  </main>
+</body>
+</html>

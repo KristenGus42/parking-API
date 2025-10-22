@@ -1,0 +1,110 @@
+/*
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the css file for website's transaction history page.
+  The page styles the transaction history card as well as a title of the page.
+  */
+
+.container, h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #472F7E;
+}
+
+#nav-bar, #right-side-nav, .card {
+  display: flex;
+}
+
+/* nav bar */
+#nav-bar {
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13vh;
+  width: 100%;
+  background: #8254EB;
+}
+
+#nav-bar button {
+  padding: 10px;
+  width: 80%;
+  height: 10%;
+  color: white;
+  border-radius: 1em;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  background-color: transparent;
+}
+
+#sign-in-btn {
+  margin-left: 20px;
+}
+
+#right-side-nav {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 700px;
+}
+
+#logo {
+  height: 3vh;
+}
+
+h1 {
+  margin: 40px;
+  margin-left: 100px;
+}
+
+/* hr line - for section seperation */
+hr {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* transaction card */
+
+.card {
+  background-color: #F8F8F8;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 16pt;
+  margin: 1.5vh;
+  margin-left: 100px;
+  width: 80%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.card div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h1 {
+  font-size: 40px;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  font-size: 23px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 20px;
+  font-size: 15px;
+}

@@ -1,0 +1,248 @@
+/*
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 11/5/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the css file for the parking reservation page. This CSS
+  organizes the parking reservation page and styles into 3 sections - reservation instructions,
+  choosing your time and spot section, and confirmation sections. There is a purple and gold theme.
+  */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* nav bar */
+#nav-bar {
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13vh;
+  width: 100%;
+  background: #8254EB;
+}
+
+#nav-bar button {
+  padding: 10px;
+  width: 80%;
+  height: 10%;
+  color: white;
+  border-radius: 1em;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  background-color: transparent;
+}
+
+#sign-in-btn {
+  margin-left: 20px;
+}
+
+#right-side-nav {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 700px;
+}
+
+#logo {
+  height: 3vh;
+}
+
+#nav-bar,
+#right-side-nav,
+#spots-space,
+.spot,
+.selected-spot,
+main,
+#selection-space,
+#confirmation-space,
+.reserved,
+#spots-space-container,
+#bottom-section,
+#confirmation-btn,
+#confirmation-btn-container {
+  display: flex;
+}
+
+main h2, .spot p, .selected-spot p, #confirmation-space p, .handi-spot p {
+  text-align: center;
+}
+
+#spots-space {
+  flex-wrap: wrap;
+}
+
+#levels, #selection-space, #time-space, #confirmation-space {
+  align-self: center;
+}
+
+.spot {
+  background-color: #b89ff3;
+  color: #472F7E;
+}
+
+.handi-spot {
+  background-color: #003F87;
+  color: white;
+}
+
+.reserved {
+  background-color: red;
+  color: red;
+}
+
+.spot, .selected-spot, .handi-spot, .reserved {
+  width: 8%;
+  height: 20px;
+  margin: 20px;
+  padding: 25px;
+}
+
+main h2 {
+  color: #472F7E;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.spot p, .selected-spot p {
+  font-size: large;
+  align-self: center;
+}
+
+#levels {
+  width: 30%;
+  padding: 30px;
+  justify-self: center;
+}
+
+.floor {
+  padding-bottom: 30px;
+}
+
+.selected-floor {
+  color: red;
+}
+
+.selected-spot {
+  background-color: #472F7E;
+  color: white;
+}
+
+main {
+  flex-direction: column;
+}
+
+#confirmation-space p {
+  color: #472F7E;
+  font-size: 16pt;
+  padding: 22px;
+  margin: auto;
+}
+
+#time-space label {
+  padding: 20px;
+}
+
+#time-space h3, #time-space form, #spots-space {
+  margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#spots-space-container h3 {
+  margin: 50px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+header h1 {
+  margin: 10px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.selected-confirm {
+  background-color: #472F7E;
+  color: #472F7E;
+}
+
+.hidden {
+  display: none;
+}
+
+/* top section */
+#top-section {
+  margin: 70px;
+  margin-bottom: 20px;
+}
+
+#top-section h3 {
+  margin-top: 10px;
+}
+
+/* bottom section */
+#bottom-section {
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+#selection-space, #time-space, #confirmation-space {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  background-color: #F8F8F8;
+  box-shadow: 7px 5px 5px #c5c5c5;
+  border-radius: 1em;
+  margin-top: 20px;
+}
+
+#spots-space-container {
+  flex-direction: column;
+}
+
+/* confirm section */
+.button {
+  width: 275px;
+  height: 60px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #8254EB;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-around;
+  align-items: center;
+  border-color: transparent;
+}
+
+#confirmation-btn-container {
+  margin: 20px;
+  justify-content: center;
+}
+
+/* #user-confirmation {
+
+} */
+
+#edit-btn {
+  margin-left: 70px;
+}

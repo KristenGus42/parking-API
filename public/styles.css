@@ -1,0 +1,297 @@
+/*
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the css file for the website's main page.
+  The theme colors we will be using are purple, black, white, gray.
+  The page consists of 3 main sections: nav bar, search and filter section, and
+  parking place card display section.
+  Parking place card display section will have two views - cluster and list.
+  */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#nav-bar,
+#right-side-nav,
+#toggle-page-view-container,
+#main-section-container,
+.card,
+#left-section-container,
+#search-section-container,
+#search-bar-container,
+#init-filter-btn,
+#filter-submit-btn,
+.container-wrapper,
+#left-container-wrapper,
+#register-container,
+#footer {
+  display: flex;
+}
+
+/* nav bar */
+#nav-bar {
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13vh;
+  width: 100%;
+  background: #8254EB;
+}
+
+#nav-bar button {
+  padding: 10px;
+  width: 80%;
+  height: 10%;
+  color: white;
+  border-radius: 1em;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  background-color: transparent;
+}
+
+#sign-in-btn {
+  margin-left: 20px;
+}
+
+#right-side-nav {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 700px;
+}
+
+#logo {
+  height: 3vh;
+}
+
+/* toggle icon bar */
+#toggle-page-view-container {
+  justify-content: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 70px;
+}
+
+#toggle-page-view-container img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+/* main section */
+#main-section-container {
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+/* right section container */
+.cluster-view {
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+
+/* parking place card */
+.card {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F8F8F8;
+  border-color: #11042f;
+  border-radius: 20px;
+  padding: 2vh;
+  margin: 1.5vh;
+  width: 370px;
+  height: 300px;
+}
+
+.card img {
+  height: 180px;
+  margin: 10px;
+}
+
+.card h1 {
+  font-size: 16pt;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.selected {
+  filter: blur(4px);
+}
+
+/* testing area css styles */
+#carasel-info {
+  border: solid 5px black;
+  margin: 20px;
+}
+
+#carasel-info p {
+  padding: 20px;
+}
+
+#left-container-wrapper div p {
+  color: red;
+}
+
+/* left side container */
+
+#left-section-container {
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 80px;
+  margin-right: 100px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+#search-section-container {
+  flex-direction: column;
+}
+
+#search-bar-container {
+  justify-content: center;
+  width: 40%;
+}
+
+#search-box {
+  width: 300px;
+  height: 28px;
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+#search-btn {
+  color: #472F7E;
+  background-color: white;
+  border-radius: 0.5em;
+  width: 130px;
+  height: 32px;
+}
+
+#init-filter-btn, #filter-submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #8254EB;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  border-color: transparent;
+}
+
+/* sign in view */
+.container-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+}
+
+#left-container {
+  border: 1px solid #878787;
+  border-radius: 1em;
+  box-shadow: 2px 4px 7px #d1d1d1;
+  margin: 100px;
+  padding: 50px;
+}
+
+#left-container-wrapper {
+  flex-direction: column;
+  margin-left: 60px;
+  height: 100%;
+}
+
+#sign-in-view h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#sign-in-view h1 {
+  color: #000;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+#sign-in-view h2 {
+  color: #000;
+  font-size: 31px;
+  font-weight: 500;
+}
+
+#sign-in-view h3, p {
+  color: #7d7d7d;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#register-account-btn {
+  color: #472F7E;
+  font-size: 16px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#username, #password, #remember-me, #sign-in-form-btn, #sign-up-form-btn {
+  margin-top: 20px;
+}
+
+#sign-in-form-btn, #sign-up-form-btn {
+  font-size: 16px;
+  color: white;
+  background-color: #8254EB;
+  border-color: transparent;
+  border-radius: 6px;
+  width: 423px;
+  height: 57px;
+  margin-top: 50px;
+}
+
+#register-container {
+  flex-direction: row;
+  margin-left: 85px;
+}
+
+.container img {
+  width: 400px;
+  height: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+#right-section-container .hidden {
+  display: none;
+}
+
+#list-view h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+}

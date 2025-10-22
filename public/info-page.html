@@ -1,0 +1,123 @@
+<!--
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the html file for detailed parking location information (e.g. Central Plaza Garage).
+  It includes two main sections: basic detailed info for this particular parking location and
+  reserve a parking spot at this location (CTA button => will
+  go to a new page to complete the booking).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info-page.css">
+    <script src="info-page.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Detailed Info Page for Central Plaza Garage</title>
+  </head>
+  <body>
+    <header>
+      <section id="nav-bar">
+        <nav>
+          <a href="index.html"><img id="logo" src="icons/logo.png" alt="logo icon"></a>
+        </nav>
+        <nav id="right-side-nav">
+          <button id='history-btn'>Transaction History</button>
+          <button id='sign-in-btn' disabled>Sign In</button>
+        </nav>
+      </section>
+    </header>
+    <main>
+
+      <section id="home">
+        <!-- top section with an overview info for the selected garage-->
+        <section id="top-overview-container" class="container">
+          <div id="top-inner-content-container">
+            <h1>Testing Name</h1>
+            <p>
+              description - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Ut vel tristique ante, vel semper augue. Cras varius maximus varius.
+              Suspendisse volutpat hendrerit nisl id accumsan. Vestibulum mattis facilisis dui,
+              tempor rutrum ex. Aliquam vitae lacus et arcu sollicitudin cursus. Nulla nec enim
+              vitae sapien venenatis mollis.
+            </p>
+          </div>
+        </section>
+
+        <section id="bottom-section-container" class="container">
+          <!-- basic info about the garage: location, hours, rate -->
+          <section id="basic-info-container" class="sub-container">
+            <section id="address">
+              <h2>Location</h2>
+              <p>Testing location address</p>
+            </section>
+            <article id="hours">
+              <h2>Hours</h2>
+              <section>
+                <p>Mon 6:00AM - 9:00PM</p>
+                <p>Tue 6:00AM - 9:00PM</p>
+                <p>Wed 6:00AM - 9:00PM</p>
+                <p>Thur 6:00AM - 9:00PM</p>
+                <p>Fri 6:00AM - 9:00PM</p>
+                <p>Sat 6:00AM - 9:00PM</p>
+                <p>Sun Free</p>
+              </section>
+            </article>
+            <section id="rate">
+              <h2>Rate</h2>
+              <h3>Testing rate</h3>
+              <p>*Pay using pay by phone</p>
+            </section>
+          </section>
+
+          <div id="left-bottom-section-container">
+            <!-- student review section -->
+            <section id="student-reviews">
+              <h2>1 Review</h2>
+              <hr>
+              <!-- hard coding the cards out - we are not doing this function, don't grade it -->
+              <section class="card">
+                <div>
+                  <h3>Username 1</h3>
+                  <p>
+                    I love this parking place!
+                  </p>
+                </div>
+                <div>
+                  <h1>4/5</h1>
+                </div>
+              </section>
+              <button id="more-reviews-btn" class="button">View More Reviews</button>
+              <hr>
+            </section>
+
+            <!-- parking reservation section -->
+            <section id="parking-reservation">
+              <button id="reservation-btn" class="button">Reserve a Parking</button>
+            </section>
+          </div>
+        </section>
+      </section>
+
+      <!-- new review view - not doing it; don't grade any review section -->
+      <section id='new' class='hidden'>
+        <h2>Write a review for a specific parking place on campus!</h2>
+        <form>
+          <label for='name'>Parking Place Name: </label>
+          <input type='text' id='name' name='name' required>
+          <label for='comment'>Comment: </label>
+          <input type='text' id='comment' name='comment' required>
+          <label for='rating'>Rating (1-5, 5 - it is great! 1 - I don't like it :( ): </label>
+          <input type='text' id='rating' name='rating' required>
+          <button>Submit!</button>
+        </form>
+      </section>
+
+    </main>
+  </body>
+</html>

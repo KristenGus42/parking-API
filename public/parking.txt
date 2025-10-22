@@ -1,0 +1,91 @@
+  function init() {
+    document.getElementById("arrow-btn").addEventListener("click", switchPicture);
+    document.getElementById("E18").addEventListener("click", updateInfo);
+    document.getElementById("N20").addEventListener("click", updateInfo);
+  }
+
+  function updateInfo() {
+    let id = this.id;
+    localStorage.setItem("lot", id);
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /**
+   * Creates the floor headings in the dom and prepares them for user
+   * interaction
+   */
+  function createInitial() {
+    const floors = ["E18"];
+    for (let i = 0; i < floors.length; i++) {
+      let floorHeading = document.createElement("h2");
+      floorHeading.textContent = floors[i];
+      floorHeading.id = floors[i];
+      floorHeading.classList.add("floor");
+      document.getElementById("levels").appendChild(floorHeading);
+      floorHeading.addEventListener("click", switchLevel);
+    }
+  }
+
+  /**
+   * Creates the parking spots within the DOm with teh given information
+   * @param {Array} garage an array representation of garage
+   * @param {int} floorNum the floor number that is being generated on screen
+   */
+  function createFloor(garage, floorNum) {
+    //const curFloor = garage[floorNum];
+    const curFloor = 
+    for (let i = 1; i < (curFloor.length); i++) {
+      let spot = document.createElement("article");
+      spot.classList.add("spot");
+      spot.id = curFloor[i];
+
+      let heading = document.createElement("p");
+      heading.textContent = curFloor[0] + ": " + i;
+      spot.appendChild(heading);
+
+      document.getElementById("spots-space").appendChild(spot);
+      spot.addEventListener("click", selected);
+    }
+  }
+
+    /**
+   * When a user selects a floor this function makes it appear selected
+   * and deselects the last floor
+   */
+  function switchLevel() {
+    let oldFloor = document.querySelector(".selected-floor");
+    if (oldFloor !== null) {
+      oldFloor.classList.replace("selected-floor", "floor");
+    }
+    const garage = createGarageInfo();
+    let newFloor = findFloorIndex(this.id, garage);
+    const floorArr = garage[newFloor];
+    let floorElem = document.getElementById(floorArr[0]);
+    floorElem.classList.replace("floor", "selected-floor");
+    document.getElementById("spots-space").innerHTML = "";
+
+    createFloor(garage, newFloor);
+  }
+
+  /**
+   * This function takes an id of a floor and converts it into an index.
+   * Returns -1 if the given id is not associated with a floor
+   * @param {String} id given id of floor
+   * @param {Array} garage array representing garage
+   * @returns {Integer} a number to represent the index of the given floor id
+   */
+  function findFloorIndex(id, garage) {
+    for (let i = 0; i < garage.length; i++) {
+      if (garage[i][0] === id) {
+        return i;
+      }
+    }
+    return -1;
+  }

@@ -1,0 +1,223 @@
+/*
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the css file for parking place's detailed info page.
+  The theme colors we will be using are purple, black, and gray.
+  We will style and append the detailed information of each garage to the
+  top sections and bottom sections accordingly.
+  */
+
+/* nav bar */
+#nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13vh;
+  width: 100%;
+  background: #8254EB;
+}
+
+#nav-bar button {
+  padding: 10px;
+  width: 80%;
+  height: 10%;
+  color: white;
+  border-radius: 1em;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  background-color: transparent;
+}
+
+#sign-in-btn {
+  margin-left: 20px;
+}
+
+#right-side-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 700px;
+}
+
+#logo {
+  height: 3vh;
+}
+
+/* main section */
+.checked {
+  color: orange;
+}
+
+hr {
+  width: 90%;
+  text-align: left;
+  margin-left: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container h1 {
+  color: #472F7E;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#top-overview-container {
+  width: 100%;
+  height: 430px;
+  margin-left: auto;
+  background-image: url('images/test-bg-img.png');
+  background-attachment: static;
+  background-position: center;
+  background-size: 100%;
+}
+
+#top-inner-content-container p {
+  display: flex;
+  width: 50%;
+}
+
+#top-inner-content-container {
+  margin: 50px;
+}
+
+#bottom-section-container {
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#bottom-section-container h3 {
+  font-size: 16px;
+}
+
+/* try to figure out the star sizing & line up the format.. */
+#star-rating-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+#star-rating {
+  margin: 0;
+}
+
+/* left bottom section */
+#left-bottom-section-container {
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+/* right bottom section */
+#basic-info-container {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  width: 275px;
+  height: 60px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #8254EB;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-around;
+  align-items: center;
+  border-color: transparent;
+}
+
+#more-reviews-btn {
+  display: flex;
+  margin-left: 300px;
+  justify-content: center;
+  background-color: transparent;
+  color: #472F7E;
+}
+
+#reservation-btn {
+  margin-left: 50px;
+}
+
+#student-reviews {
+  margin-left: 50px;
+}
+
+.card {
+  display: flex;
+  background-color: #F8F8F8;
+  padding: 1.5vh;
+  border-radius: 20px;
+  font-size: 16pt;
+  margin: 1.5vh;
+  margin-left: 50px;
+  width: 80%;
+  height: 100px;
+  justify-content: center;
+  align-items: left;
+}
+
+.card div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h1 {
+  font-size: 40px;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 0px;
+  font-size: 15px;
+}
+
+/* new review */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  padding: 20px;
+  width: 45vw;
+  border-radius: 15px;
+}
+
+form input {
+  width: 40vw;
+  height: 35px;
+}
+
+.hidden {
+  display: none;
+}

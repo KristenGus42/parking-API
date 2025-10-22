@@ -1,0 +1,190 @@
+<!--
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the html file for our website --- DubPark -- 's main page.
+  It includes a nav bar, a search and filter function to find desired parking area,
+  and card display area to see the corresponded parking places. There is also two formats to view
+  the parking cards - cluster and list.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title> DubPark </title>
+  </head>
+  <body>
+    <header>
+      <section id="nav-bar">
+        <nav>
+          <a href="index.html"><img id="logo" src="icons/logo.png" alt="logo icon"></a>
+        </nav>
+        <nav id="right-side-nav">
+          <button id='history-btn'>Transaction History</button>
+          <button id='sign-in-btn'>Sign In</button>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <!-- home view  -->
+      <section id="home"> <!-- *** add class hidden, after implementing the log in request *** -->
+        <section id="toggle-page-view-container">
+          <img id="cluster-view-icon" src="icons/cluster-view.png" alt="cluster-view icon">
+          <img id="list-view-icon" src="icons/row-view.png" alt="row-view icon">
+        </section>
+
+        <section id="main-section-container">
+
+          <!-- bottom section -->
+          <section id="left-section-container">
+
+            <!-- search function -->
+            <section id="search-section-container">
+              <section id="search-bar" class="search-section">
+                <form>
+                  <input type="text" id="search-box" name="search-bar" value="search">
+                  <button id="search-btn" type="button">Search</button>
+                </form>
+              </section>
+
+              <!-- filter function (toggle thru clicking init btn) -->
+              <button id="init-filter-btn">Filter +</button>
+
+              <section id="filter" class="hidden">
+                <form id="filter-form">
+                  <h2>Disabled Parking</h2>
+                  <input type="checkbox" id="handicapped-form" name="handicapped-form">
+                  <label for="handicapped-form">Handicapped</label><br>
+                  <button id="filter-submit-btn" type="button">Apply Filter</button>
+                </form>
+              </section>
+              <section id="ad">
+                <h2>Map Alert!</h2>
+                <h3>Want to borrow a special DubParks map during your visit? Request one here! </h3>
+                <button id="map-confirm-btn" value="reserve">Reserve a free map!</button>
+                <button id="map-submit-btn" class="hidden" value="confirm">
+                  Are you sure you want to reserve this map?
+                </button>
+              </section>
+            </section>
+          </section>
+
+          <!-- card display container -->
+          <section id="right-section-container">
+
+            <section id="cluster-view-total">
+              <section class="cluster-view">
+                <!-- appended card example in cluster-view-->
+                <section class="card" id="n20-img">
+                  <a href="info-page.html"><img src="images/N20.jpg" alt="Picture of N20 UW lot" class="garage-imgs"></a>
+                  <h1>Pedalford</h1>
+                </section>
+
+                <section class="card" id="e18-img" >
+                  <a href="info-page.html"><img src="images/E18.jpg" alt="Picture of E18 UW lot" class="garage-imgs"></a>
+                  <h1>E18</h1>
+                </section>
+              </section>
+
+              <section class="cluster-view">
+                <section class="card" id="c06-img" >
+                  <a href="info-page.html"><img src="images/C06.jpg" alt="Picture of C06 UW lot" class="garage-imgs"></a>
+                  <h1>Central Plaza Parking Garage</h1>
+                </section>
+
+                <section class="card" id="n05-img">
+                  <a href="info-page.html"><img src="images/N05.jpg" alt="Picture of N05 UW lot" class="garage-imgs"></a>
+                  <h1>N05</h1>
+                </section>
+              </section>
+
+              <section class="cluster-view">
+                <section class="card" id="n01-img">
+                  <a href="info-page.html"><img src="images/N01.jpg" alt="Picture of N01 UW lot" class="garage-imgs"></a>
+                  <h1>N01</h1>
+                </section>
+              </section>
+            </section>
+
+            <section id="list-view" class="hidden">
+              <!-- appended card example in list-view-->
+              <section class="list-view-card" id="n20-list">
+                <a href="info-page.html"><h1>Pedalford</h1></a>
+              </section>
+
+              <section class="list-view-card" id="e18-list">
+                <a href="info-page.html"><h1>E18</h1></a>
+              </section>
+
+              <section class="list-view-card" id="c06-list">
+                <a href="info-page.html"><h1>Central Plaza Garage</h1></a>
+              </section>
+
+              <section class="list-view-card" id="n05-list">
+                <a href="info-page.html"><h1>N05</h1></a>
+              </section>
+
+              <section class="list-view-card" id="n01-list">
+                <a href="info-page.html"><h1>N01</h1></a>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- sign in view -->
+      <section id="sign-in-view" class="hidden">
+        <section class="container-wrapper">
+          <section id="left-container" class="container">
+            <section id="left-container-wrapper">
+              <h1>Welcome!</h1>
+              <div>
+                <h2>Sign in to</h2>
+                <h3>DubPark</h3>
+              </div>
+
+              <form id="sign-in-form">
+                <label>Username <input id='username' type='text' required></label><br>
+                <label>Password <input id='password' type='password' required></label><br>
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label><br>
+                <button type="button" id='sign-in-form-btn'>Sign In</button>
+              </form>
+
+              <form id="sign-up-form" class="hidden">
+                <label>Username <input id='new-username' type='text' required></label><br>
+                <label>Password <input id='new-password' type='text' required></label><br>
+                <label>Email <input id='new-email' type='text' required></label><br>
+                <button type="button" id='sign-up-form-btn'>Create Account</button>
+              </form>
+
+              <section id="register-container">
+                <p>Don't have an account?</p>
+                <button id="register-account-btn">Register</button>
+              </section>
+            </section>
+          </section>
+          <section id="right-container" class="container">
+            <img src="https://www.washington.edu/research/wp-content/uploads/2017/03/slide-show-research-administrators-day-e1569268928647.jpg" alt="UW gate img">
+          </section>
+        </section>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        References:
+      </p>
+      <ul>
+        <li>https://www.w3schools.com/howto/howto_css_star_rating.asp</li>
+      </ul>
+    </footer>
+  </body>
+</html>

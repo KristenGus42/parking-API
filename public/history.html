@@ -1,0 +1,40 @@
+<!--
+  Name: Kristen Gustafson & Jennifer Feng
+  Date: 12/11/2023
+  Section: CSE 154 AC, Kasten Welsh & Elias Belzberg
+
+  This is the html file for the transaction history page to our website DubPark.
+  This page will allow a user to browse their transaction history (appending history cards) with
+  each confirmation number and garage name.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="history.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="history.js"></script>
+    <title>Detailed Info Page for Central Plaza Garage</title>
+  </head>
+  <body>
+    <header>
+      <section id="nav-bar">
+        <nav>
+          <a href="index.html"><img id="logo" src="icons/logo.png" alt="logo icon"></a>
+        </nav>
+        <nav id="right-side-nav">
+          <button id='history-btn'>Transaction History</button>
+          <button id='sign-in-btn' disabled>Sign In</button>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <h1>Transaction History</h1>
+      <hr>
+      <section id="history-card-section-container" class="container"></section>
+    </main>
+  </body>
+</html>
