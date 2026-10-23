@@ -54,3 +54,5 @@ See [APIDOC.md](./APIDOC.md) for endpoint details and [assignment-description.md
 ## Project scope
 
 DubPark is an educational prototype and is not affiliated with or connected to University of Washington parking services. Its availability and reservation information comes from the project’s local database; reservations made in the application do not reserve real-world parking.
+
+Originally this project was worked on and hosted in a private GitHub repo for the course, and has been migrated here to be available publicly. 
